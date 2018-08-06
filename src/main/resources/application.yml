@@ -1,0 +1,22 @@
+spring:
+  profiles: dev
+server:
+  port: 8081
+  logging:
+  level:
+    org.springframework: DEBUG
+  jpa:
+    show-sql: true
+  datasource:
+    username: "vidya"
+    password: "vidya"
+    url: "jdbc:oracle:thin:@localhost:1521/xe"
+    driver-class-name: oracle.jdbc.OracleDriver"
+---
+spring:
+  profiles: test
+server:
+  port: 8095
+  logging:
+  level:
+    org.springframework: INFO
